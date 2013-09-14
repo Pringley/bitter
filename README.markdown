@@ -1,7 +1,6 @@
 # Bitter
 
-Convert binary data to English words from the dictionary described in [RFC
-1760](http://www.ietf.org/rfc/rfc1760.txt).
+Convert binary data to English gibberish using a dictionary of 2^16 words.
 
 ## Installation
 
