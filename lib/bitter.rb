@@ -1,4 +1,5 @@
 require "bitter/version"
+require "bitter/words"
 
 module Bitter
 
