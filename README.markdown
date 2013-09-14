@@ -2,6 +2,16 @@
 
 Convert binary data to English gibberish using a dictionary of 2^16 words.
 
+A normal 128-bit number can be encoded in hexidecimal as:
+
+    aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+
+This is pretty tough to copy by hand. Why not use English? Bitter takes the
+same 128-bit number and encodes it as:
+
+    ponce scarlet successive toughened streamlines
+    superlative deng compressor pried dominions
+
 ## Installation
 
 Add this line to your application's Gemfile:
