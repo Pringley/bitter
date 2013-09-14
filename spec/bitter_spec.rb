@@ -13,4 +13,16 @@ describe Bitter do
     end
   end
 
+  describe ".decode" do
+    context "three null bytes" do
+      subject { Bitter.decode "aachen aachen eight" }
+      it { should eq([0, 0, 0].pack('c*')) }
+    end
+    context "hello world" do
+      let(:string) { "hello world!" }
+      subject { Bitter.decode(Bitter.encode string) }
+      it { should eq(string) }
+    end
+  end
+
 end

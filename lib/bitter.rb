@@ -2,6 +2,9 @@ require "bitter/version"
 
 module Bitter
 
+  NUMBERS = Hash[%w{one two three four five six seven eight nine ten
+     eleven twelve thirteen fourteen fifteen}.zip(1..15)]
+
   # Encode a String of bytes using the bitter word list.
   def self.encode byte_string
     footer = nil
@@ -17,6 +20,26 @@ module Bitter
     end
     words << footer if not footer.nil?
     words.join ' '
+  end
+
+  # Decode a String of bytes using the bitter word list.
+  def self.decode bitter_string
+    words = bitter_string.split
+    number = words.pop if NUMBERS.has_key? words.last
+    bytes = words.collect { |word|
+      twobyte = WORDS.index(word)
+      second = twobyte % (2**8)
+      first = twobyte / 2**8
+      [first, second]
+    }.flatten
+    if number
+      if number == 'eight'
+        bytes.pop
+      else
+        raise RuntimeError 'Cannot decode bit-by-bit'
+      end
+    end
+    bytes.pack('c*')
   end
 
 end
