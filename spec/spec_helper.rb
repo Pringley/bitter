@@ -14,6 +14,12 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
+require 'bitter'
+
 RSpec::Matchers.define :contain_duplicates do
   match { |ary| Set.new(ary).size < ary.size }
+end
+
+RSpec::Matchers.define :bitter_encode_to do |expected|
+  match { |actual| Bitter.encode(actual) == expected }
 end
