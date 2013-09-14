@@ -8,7 +8,7 @@ module Bitter
     words = byte_string.each_byte.each_slice(2).collect do |pair|
       first = pair.first
       second = if pair.size == 2
-                 pair[0]
+                 pair[1]
                else
                  footer = 'eight'
                  0
