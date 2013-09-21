@@ -1,3 +1,4 @@
+require "securerandom"
 require "bitter/version"
 require "bitter/words"
 
@@ -41,6 +42,11 @@ module Bitter
       end
     end
     bytes.pack('c*')
+  end
+
+  # Generate the specified number of random bytes and encode them.
+  def self.random bytes
+    encode SecureRandom.random_bytes(bytes)
   end
 
 end
