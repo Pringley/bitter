@@ -1,5 +1,7 @@
 # Bitter
 
+[![Build Status](https://travis-ci.org/Pringley/bitter.png)](https://travis-ci.org/Pringley/bitter)
+
 Convert binary data to English gibberish using a dictionary of 2^16 words.
 
 A normal 128-bit number can be encoded in hexidecimal as:
