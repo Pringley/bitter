@@ -14,6 +14,9 @@ same 128-bit number and encodes it as:
     ponce scarlet successive toughened streamlines
     superlative deng compressor pried dominions
 
+The word list is available in
+[`words.txt`](https://github.com/Pringley/bitter/blob/master/words.txt).
+
 ## Installation
 
 Add this line to your application's Gemfile:
