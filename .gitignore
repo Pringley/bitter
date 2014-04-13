@@ -21,3 +21,6 @@ tmp
 # Editor files (vim)
 *~
 .*.swp
+
+# OS X
+.DS_Store
