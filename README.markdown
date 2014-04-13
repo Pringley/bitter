@@ -15,7 +15,7 @@ same 128-bit number and encodes it as:
     superlative deng compressor pried dominions
 
 The word list is available in
-[`words.txt`](https://github.com/Pringley/bitter/blob/master/words.txt).
+[`words.txt`](https://github.com/Pringley/bitter/raw/master/words.txt).
 
 ## Installation
 
